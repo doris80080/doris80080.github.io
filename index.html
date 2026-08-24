@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>企鵝妹的數學王國</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif}
+body{background:linear-gradient(#f9d8ee,#fff1f8 48%,#e8e5ff);color:#50365d}
+.page{min-height:100vh;padding:14px;overflow:hidden;position:relative}
+.shell{width:min(980px,100%);margin:auto}
+.header{text-align:center;margin:3px auto 14px}.crown{font-size:34px}
+h1{margin:0;font-size:clamp(32px,7vw,60px);font-weight:1000;color:#fff;letter-spacing:2px;text-shadow:0 4px #9b4d92,0 7px 12px #8b557344}
+.subtitle{display:inline-block;margin-top:7px;padding:8px 20px;border-radius:999px;background:#fff;color:#b14f8e;font-weight:900}
+.scene{height:360px;position:relative;overflow:hidden;border:5px solid #fff;border-radius:42px;background:linear-gradient(#f7bfe1 0%,#c9c5f2 52%,#a8d7c5 100%);box-shadow:0 14px 38px #6c437433}
+.curtain{position:absolute;top:-25px;width:32%;height:150px;background:linear-gradient(90deg,#d95a9b,#f4a9ca,#c95091);opacity:.9}.curtain.l{left:-8%;border-radius:0 0 75% 20%}.curtain.r{right:-8%;border-radius:0 0 20% 75%}
+.castle{position:absolute;left:50%;top:30px;transform:translateX(-50%);width:min(390px,72%);height:190px}
+.tower,.main{position:absolute;bottom:0;background:#fff1fb;border:4px solid #d78abd}.tower{width:80px;height:135px;border-radius:42px 42px 8px 8px}.tower:before,.main:before{content:"";position:absolute;left:50%;transform:translateX(-50%);top:-48px;border-left:46px solid transparent;border-right:46px solid transparent;border-bottom:55px solid #b77cc9}.tower.l{left:15px}.tower.r{right:15px}
+.main{left:50%;transform:translateX(-50%);width:135px;height:168px;border-radius:65px 65px 8px 8px}.main:before{top:-58px;border-left-width:76px;border-right-width:76px;border-bottom:64px solid #f28db7}
+.window{position:absolute;left:50%;top:40px;transform:translateX(-50%);width:38px;height:52px;border-radius:22px 22px 8px 8px;background:#8fc8ee;border:4px solid #fff}.door{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:45px;height:62px;border-radius:25px 25px 0 0;background:#9d6ab8;border:4px solid #fff}
+.penguin{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);width:118px;height:150px}.pbody{position:absolute;left:10px;bottom:0;width:98px;height:130px;background:#26334b;border-radius:50%}.belly{position:absolute;left:26px;bottom:7px;width:66px;height:88px;background:#fff;border-radius:50%}.face{position:absolute;left:19px;top:6px;width:80px;height:78px;background:#26334b;border-radius:50%}
+.eye{position:absolute;top:28px;width:17px;height:22px;background:#fff;border-radius:50%}.eye:after{content:"";position:absolute;width:7px;height:9px;background:#222;border-radius:50%;left:5px;top:5px}.e1{left:17px}.e2{right:17px}.beak{position:absolute;top:47px;left:50%;transform:translateX(-50%);width:27px;height:17px;background:#ffb23f;border-radius:50%}
+.bow{position:absolute;top:-3px;left:50%;transform:translateX(-50%);z-index:5}.bow:before,.bow:after{content:"";position:absolute;top:5px;width:30px;height:23px;background:#f05a9d;border:3px solid #fff;border-radius:70% 25% 70% 25%}.bow:before{right:2px;transform:rotate(20deg)}.bow:after{left:2px;transform:scaleX(-1) rotate(20deg)}.bow i{display:block;position:relative;width:18px;height:18px;background:#ffd45b;border:3px solid #fff;border-radius:50%;z-index:2}
+.foot{position:absolute;bottom:-4px;width:38px;height:18px;background:#ffb23f;border-radius:50%}.f1{left:15px}.f2{right:15px}
+.hero{position:absolute;bottom:15px;left:10px;right:10px;text-align:center;z-index:6}.hero strong{display:inline-block;background:#fff;padding:9px 20px;border-radius:999px;color:#a54a88;font-weight:1000}
+.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}.choice{min-height:205px;padding:18px 14px;border:4px solid #fff;border-radius:30px;text-decoration:none;color:inherit;display:flex;align-items:center;justify-content:center;text-align:center;background:#fff;box-shadow:0 10px 24px #5a366426;transition:.18s}.choice:hover{transform:translateY(-5px)}.kind{background:linear-gradient(#fff,#ffe5f2)}.g1{background:linear-gradient(#fff,#fff1c9)}.g2{background:linear-gradient(#fff,#dff3ff)}.icon{font-size:52px;margin-bottom:7px}.choice h2{margin:0;font-size:27px;font-weight:1000}.choice p{margin:7px 0;font-size:14px;font-weight:800;line-height:1.5}.play{display:inline-block;padding:7px 16px;border-radius:999px;background:#f05d9c;color:#fff;font-weight:1000;box-shadow:0 4px #c63f7d}.lock{opacity:.9}.lock .play{background:#aaa1b3;box-shadow:0 4px #88808f}.footer{text-align:center;margin-top:15px;font-size:13px;font-weight:800;color:#7b6b7e}
+@media(max-width:700px){.page{padding:9px}.scene{height:300px;border-radius:28px}.castle{transform:translateX(-50%) scale(.78);transform-origin:top center}.penguin{transform:translateX(-50%) scale(.78);transform-origin:bottom center}.choices{grid-template-columns:1fr;gap:11px}.choice{min-height:145px;justify-content:flex-start;text-align:left;padding:14px 17px}.icon{font-size:48px;margin:0 14px 0 0}.choice h2{font-size:22px}.choice p{font-size:12px}.hero strong{font-size:13px;padding:8px 14px}}
+</style>
+</head>
+<body>
+<div class="page"><main class="shell">
+<header class="header"><div class="crown">👑</div><h1>企鵝妹的數學王國</h1><div class="subtitle">🐧 一起踏上數學冒險吧！ ✨</div></header>
+<section class="scene">
+<div class="curtain l"></div><div class="curtain r"></div>
+<div class="castle"><div class="tower l"></div><div class="tower r"></div><div class="main"><div class="window"></div><div class="door"></div></div></div>
+<div class="penguin"><div class="bow"><i></i></div><div class="pbody"></div><div class="belly"></div><div class="face"></div><div class="eye e1"></div><div class="eye e2"></div><div class="beak"></div><div class="foot f1"></div><div class="foot f2"></div></div>
+<div class="hero"><strong>選擇你的數學冒險，出發吧！</strong></div>
+</section>
+<section class="choices">
+<a class="choice kind" href="/xuan-math-game-kindergarten/"><div class="icon">👑🐧</div><div><h2>中大班版</h2><p>適合幼兒園中班～大班<br>15 個情境數學遊戲</p><span class="play">▶ 開始冒險</span></div></a>
+<div class="choice g1 lock"><div class="icon">🌟</div><div><h2>一年級版</h2><p>國小一年級數學冒險<br>精彩內容準備中</p><span class="play">🔒 即將推出</span></div></div>
+<div class="choice g2 lock"><div class="icon">🏆</div><div><h2>二年級版</h2><p>國小二年級數學挑戰<br>精彩內容準備中</p><span class="play">🔒 即將推出</span></div></div>
+</section>
+<div class="footer">🐧 企鵝妹陪你每天玩數學，學數學好開心！</div>
+</main></div>
+</body></html>
