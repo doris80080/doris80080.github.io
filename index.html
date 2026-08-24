@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f8c9e4">
+<title>企鵝妹的數學王國</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif}
+body{background:linear-gradient(180deg,#f8d7ed,#fff4fa 52%,#e9e5ff);color:#573b62}
+.page{width:100%;min-height:100vh;padding:12px 12px 24px}
+.shell{width:min(980px,100%);margin:auto}
+.header{text-align:center;margin:0 auto 12px}
+.crown{font-size:31px;line-height:1;margin-bottom:2px}
+h1{margin:0;font-size:clamp(31px,6vw,56px);font-weight:1000;letter-spacing:1px;color:#fff;text-shadow:0 4px 0 #9c4f91,0 7px 12px #7d4b7625}
+.subtitle{display:inline-block;margin-top:7px;padding:7px 18px;border-radius:999px;background:#fff;color:#b24f8d;font-size:clamp(14px,2.5vw,18px);font-weight:900;box-shadow:0 5px 14px #744a7215}
+.hero{position:relative;overflow:hidden;border:5px solid #fff;border-radius:30px;box-shadow:0 12px 28px #71456825;background:#fff}
+.hero img{display:block;width:100%;height:auto;max-height:370px;object-fit:cover;object-position:center top}
+.heroNote{position:absolute;left:50%;bottom:13px;transform:translateX(-50%);white-space:nowrap;background:#fffffff2;color:#a34b87;border-radius:999px;padding:8px 19px;font-weight:1000;font-size:clamp(13px,2.3vw,18px);box-shadow:0 5px 14px #6f416b20}
+.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.choice{min-height:145px;border:4px solid #fff;border-radius:26px;text-decoration:none;color:inherit;padding:14px 13px;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 9px 22px #60405d1e;transition:transform .16s,box-shadow .16s}
+.choice:hover{transform:translateY(-4px);box-shadow:0 14px 28px #60405d2b}
+.kind{background:linear-gradient(180deg,#fff,#ffe1ef)}.g1{background:linear-gradient(180deg,#fff,#fff0c7)}.g2{background:linear-gradient(180deg,#fff,#dff2ff)}
+.icon{font-size:39px;line-height:1;margin-bottom:5px}.choice h2{margin:0;font-size:clamp(20px,2.8vw,28px);font-weight:1000}.choice p{margin:5px 0 8px;font-size:12px;font-weight:800;line-height:1.4;color:#6b596f}
+.play{display:inline-block;padding:6px 13px;border-radius:999px;background:#ef5c9c;color:#fff;font-size:12px;font-weight:1000;box-shadow:0 3px #c63e7c}.lock .play{background:#aaa1b2;box-shadow:0 3px #89818e}
+.footer{text-align:center;margin-top:11px;color:#7a6a7e;font-size:12px;font-weight:800}
+@media(max-width:700px){
+ .page{padding:8px 8px 18px}
+ .header{margin-bottom:9px}.crown{font-size:27px}h1{font-size:32px}.subtitle{font-size:13px;padding:6px 14px}
+ .hero{border-radius:24px}.hero img{height:245px;object-fit:cover;object-position:center top}
+ .heroNote{bottom:9px;font-size:12px;padding:7px 13px}
+ .choices{grid-template-columns:1fr;gap:9px;margin-top:10px}
+ .choice{min-height:118px;border-radius:22px;padding:10px 14px;justify-content:flex-start;text-align:left}
+ .choice .icon{width:58px;flex:0 0 58px;font-size:40px;margin:0 10px 0 0;text-align:center}
+ .choice h2{font-size:21px}.choice p{font-size:11px;margin:3px 0 5px}.play{font-size:11px;padding:5px 11px}
+}
+@media(min-width:701px){.hero img{max-height:355px}}
+</style>
+</head>
+<body>
+<div class="page"><main class="shell">
+<header class="header"><div class="crown">👑</div><h1>企鵝妹的數學王國</h1><div class="subtitle">🐧 一起踏上數學冒險吧！ ✨</div></header>
+<section class="hero" aria-label="企鵝妹數學王國">
+<img src="kingdom-princess-hero.webp" alt="企鵝妹與公主城堡的數學王國">
+<div class="heroNote">✨ 選擇一個年級，開始你的數學冒險！ ✨</div>
+</section>
+<section class="choices">
+<a class="choice kind" href="/xuan-math-game-kindergarten/"><div class="icon">👑🐧</div><div><h2>中大班版</h2><p>幼兒園中班～大班<br>15 個情境數學遊戲</p><span class="play">▶ 開始冒險</span></div></a>
+<div class="choice g1 lock"><div class="icon">🌟</div><div><h2>一年級版</h2><p>國小一年級數學冒險<br>內容準備中</p><span class="play">🔒 即將推出</span></div></div>
+<div class="choice g2 lock"><div class="icon">🏆</div><div><h2>二年級版</h2><p>國小二年級數學挑戰<br>內容準備中</p><span class="play">🔒 即將推出</span></div></div>
+</section>
+<div class="footer">🐧 企鵝妹陪你每天玩數學，學數學好開心！</div>
+</main></div>
+</body></html>
